@@ -1,0 +1,20 @@
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  /* Does not add padding or border to the specified width of elements */
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-white;
+
+  padding: 3rem;
+}

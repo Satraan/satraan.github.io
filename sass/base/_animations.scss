@@ -1,0 +1,28 @@
+/* Def an animation */
+@keyframes moveInLeft {
+  /* The % refers to the progress % of the animation, i.e 100% = animation complete, 0% before animation runs*/
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  /* The % refers to the progress % of the animation, i.e 100% = animation complete, 0% before animation runs*/
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

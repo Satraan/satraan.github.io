@@ -32,6 +32,14 @@
     color: $color-grey-dark;
   }
 
+  &--primary {
+    background-color: $color-primary-light;
+    color: $color-primary-dark;
+  }  &--secondary {
+    background-color: $color-secondary-light;
+    color: $color-secondary-dark;
+  }
+
   &:after {
     /* content is required even if blank*/
     content: "";

@@ -290,6 +290,28 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+.story {
+  color: black;
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem; }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem); }
+  .story__img {
+    height: 100%; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -373,5 +395,9 @@ body {
 
 .section-tours {
   background-color: #e7eff7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 5rem 0;
   margin-top: -10rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #e7eff7; }

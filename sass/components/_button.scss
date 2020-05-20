@@ -63,6 +63,8 @@
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
   }
+
+
 }
 
 .btn-text {
@@ -84,5 +86,31 @@
   &:active {
     box-shadow: 0 .5rem 1rem rgba($color-black, .15);
     transform: translateY(0);
+  }
+}
+
+.btn-submit {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  background-color: $color-primary;
+  color: $color-white;
+  font-weight: 400;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+
+  border: none;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+
+    &::after {
+      background-color: #5575c5;
+    }
   }
 }

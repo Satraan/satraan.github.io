@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link
+            href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+            rel="stylesheet"
+    />
+    <link href="css/icon-font.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="img/favicon.png" rel="shortcut icon" type="image/png"/>
+    <title>Contact Us🚀</title>
+</head>
+<body class="page--contact">
+<header class="header">
+    <div class="header__text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary--main">Contact Us</span>
+        </h1>
+    </div>
+</header>
+
+<main>
+    <section class="section-form">
+        <form
+                action="https://formspree.io/meqreror"
+                method="POST"
+                class="contact-form"
+                id="my-form"
+        >
+            <h3 class="contact-form__heading">Get in touch and find the right solution for you</h3>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="form-input">
+                        <label for="name">
+                            Name
+                        </label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="form-input">
+                        <label for="email">
+                            Email
+                        </label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                </div>
+            </div>
+            <div class="form-input">
+                <label>
+                    Your message
+
+                </label>
+                <textarea name="message" rows="5"></textarea>
+            </div>
+
+
+            <button id="my-form-button" class="btn-submit">Submit</button>
+            <p id="my-form-status"></p>
+        </form>
+    </section>
+</main>
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("my-form");
+        var button = document.getElementById("my-form-button");
+        var status = document.getElementById("my-form-status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+            form.reset();
+            button.style = "display: none ";
+            status.innerHTML = "Thanks!";
+        }
+
+        function error() {
+            status.innerHTML = "Oops! There was a problem.";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+        });
+    });
+
+    // helper function for sending an AJAX request
+
+    function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                success(xhr.response, xhr.responseType);
+            } else {
+                error(xhr.status, xhr.response, xhr.responseType);
+            }
+        };
+        xhr.send(data);
+    }
+</script>
+</body>
+</html>

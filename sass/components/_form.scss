@@ -1,0 +1,36 @@
+.contact-form {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  padding: 5rem;
+  background-color: $color-white;
+  display: inline-block;
+  color: $color-black;
+  border-radius: 3px;
+  transform: translateY(-35rem);
+
+  min-width: 40%;
+
+  &__heading {
+    color: $color-grey-dark;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+
+  .form-input {
+    text-align: left;
+    color: $color-grey-dark;
+
+    &:not(:last-child){
+      margin-bottom: 2rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      border-radius: 3px;
+      border: solid 1px $color-grey-light;
+      padding: 1rem;
+      resize: none;
+    }
+  }
+}

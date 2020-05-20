@@ -1,0 +1,26 @@
+.page--contact {
+  .header {
+    height: 60vh;
+    background-image: linear-gradient(
+                    to right top,
+                    rgba($color-primary-light, 0.8),
+                    rgba($color-primary-dark, 0.8));
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    &__text-box {
+      top: 40%;
+
+    }
+  }
+}
+
+.section-form {
+  background-color: $color-grey-light;
+  padding: 4rem 0;
+  text-align: center;
+
+  .row {
+    margin: 2rem 0;
+  }
+}

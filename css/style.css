@@ -310,6 +310,16 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+.block {
+  height: 200px;
+  width: 200px;
+  background-color: #ff7730;
+  transform: scale(1);
+  transition: transform 0.5s; }
+
+.block:hover {
+  transform: scale(1.5); }
+
 .story {
   color: black;
   width: 75%;

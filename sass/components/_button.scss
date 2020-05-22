@@ -1,7 +1,7 @@
 
 
 .btn {
-  &:link, &:visited {
+  &, &:link, &:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -9,6 +9,8 @@
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    border:none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,10 +23,11 @@
     }
   }
 
-  &:active {
+  &:active, &:focus {
     /* This makes a real cool click animation */
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    outline: none;
   }
 
   &--white {

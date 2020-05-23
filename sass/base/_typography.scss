@@ -8,6 +8,7 @@
 
   margin-bottom: 6rem;
 
+
   &--main {
     display: block;
     font-size: 6rem;
@@ -17,7 +18,10 @@
     animation-name: moveInLeft;
     animation-duration: 800ms;
     animation-timing-function: ease-out;
-    /*animation-iteration-count: 3;*/
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -25,6 +29,9 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.7rem;
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -46,6 +53,12 @@
   color: transparent;
   letter-spacing: 2px;
   transition: all .2s;
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -55,7 +68,7 @@
 
 .heading-tertiary {
   font-size: $default-font-size;
-  font-weight: 700 ;
+  font-weight: 700;
   text-transform: uppercase;
   color: $color-black;
 }
@@ -63,7 +76,8 @@
 .paragraph {
   font-size: $default-font-size;
   color: $color-black;
-  &:not(:last-child){
+
+  &:not(:last-child) {
     margin-bottom: 3rem;
   }
 }

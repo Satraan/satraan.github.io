@@ -30,7 +30,7 @@ body {
   line-height: 1.7;
   color: $color-white;
 
-  padding: 3rem;
+  //padding: 3rem;
 
   @include respond(tab-port) {
     padding: 0;

@@ -37,9 +37,13 @@
 
 .form {
   color:$color-black;
+
+  textarea {
+    resize: none;
+  }
+
   &__group:not(:last-child) {
     margin-bottom: 2rem;
-
   }
 
   &__input {

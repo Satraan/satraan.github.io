@@ -7,6 +7,7 @@ import Section from "./components/layout/Section";
 import Heading from "./components/basic/Heading";
 import Navigation from "./components/Navigation";
 import Showcase from "./components/Showcase";
+import Profile from "./components/Profile";
 import {IconMoon} from "./assets/icons/complexIcons";
 import MartianBackground from "./assets/img/Martian.png"
 import {Column, Row} from "./components/basic/Grid";
@@ -27,7 +28,10 @@ const Main = styled.main`
 `
 
 const ContactSectionWrapper = styled.div`
-    background-image: url(${MartianBackground});
+    background-image: linear-gradient(
+                  to right bottom,
+                  rgba(${Colors.primaryRGB}, 0.8),
+                  rgba(${Colors.primaryDarkerRGB}, 0.8)),url(${MartianBackground});
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -44,17 +48,16 @@ const App = () => {
             <Main>
                 <Section>
                     <Heading><IconMoon/> About me </Heading>
-                    <p>Professionally connected with the web development industry and information technology for several
-                        years.</p>
-                    <p>Well-organised person, problem solver, independent employee with high attention to detail.</p>
-                    <p> Fan of
-                        Magic: the Gathering, camping, video games and a good wine tasting. </p>
+                    <Profile/>
+
 
                 </Section>
                 <Section>
                     <Heading><IconMoon/> Skills</Heading>
-                    <p>My main area of expertise is front end development (the client side of the web).</p>
-                    <p>HTML, CSS, JS, building small and medium web apps with React, API integration,
+                    <p>My main area of expertise is front end development (the client side of the
+                        web).</p>
+                    <p>HTML, CSS, JS, building small and medium web apps with React, API
+                        integration,
                         features, animations, and coding interactive layouts.</p>
                     <ul>
                         <li>HTML</li>

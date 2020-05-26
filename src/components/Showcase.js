@@ -8,6 +8,9 @@ const Header = styled.h1``
 const StyledShowcase = styled.div`
     position: relative;
     display: flex;
+    justify-content: space-between;
+    
+    
     width: 100%;
     margin-bottom: 5rem;
     padding: 3rem 1rem;
@@ -46,21 +49,17 @@ border-radius: 3px;
 const Showcase = ({title, children, src, link, tags = []}) => {
     return (
         <StyledShowcase>
-            <Row>
                 <i className={"icon-moon"}/>
-                <Column xs="12" sm="1" md="4">
-                    <Preview target={"_blank"} href={link}
-                        src={src}>
-                    </Preview>
-                    <TagContainer>
-                        {tags.map(tag => {
-                            return <Tag>{tag}</Tag>
-                        })}
-                    </TagContainer>
+                <Preview target={"_blank"} href={link}
+                         src={src}>
+                </Preview>
+                <TagContainer>
+                    {tags.map(tag => {
+                        return <Tag>{tag}</Tag>
+                    })}
+                </TagContainer>
 
-                </Column>
-                <Content>{children}</Content>
-            </Row>
+                {children}
         </StyledShowcase>
 
     )

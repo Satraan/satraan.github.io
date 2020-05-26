@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components'
-
+import styled, {keyframes} from 'styled-components'
+import {IconMoon} from "../assets/icons/complexIcons";
 
 const spinRight = keyframes`
     100% {
@@ -25,25 +25,32 @@ const PlanetContainer = styled.div`
     height: 300px;
     width: 300px;
 `
-const Planet = styled.div`
-position: absolute;
+const Planet = styled(IconMoon)`
+    position: absolute;
     top: 62px;
     left: -6px;
-    height: 10px;
-    width: 10px;
+    height: 120px;
+    width: 120px;
     border-radius: 100%;
-    background-color: #9F98E6;
+    
+    
 `
 const Rotation = styled.div`
      position: absolute;
-    top: -25px;
-    left: 25px;
-    width: 250px;
-    height: 250px;
+    top: -50px;
+    left: 0;
+    width: 300px;
+    height: 300px;
     border: 2px #4A437F dashed;
     border-radius: 100%;
     -webkit-animation: ${spinRight} 15s linear infinite;
     animation: ${spinRight} 15s linear infinite;
+    .icon-moon {    font-size: 4rem;
+    position: absolute;
+    left: 45px;
+    }
+    
+    
 `
 
 const ImageContainer = styled.div`

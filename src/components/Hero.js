@@ -1,10 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
 import Heading from "./basic/Heading";
-import {Colors} from "../theme";
+import {Colors} from "../theme/theme";
 import background from "../assets/img/asteroids.jpg";
 
-const Header = styled.header`
+const Subtitle = styled.h3`
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+`
+const TextBox = styled.div`
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 
 `
 const StyledHero = styled.div`
@@ -23,10 +33,12 @@ const StyledHero = styled.div`
 
 
 const Hero = () => {
-
     return (
         <StyledHero>
-            <Heading letterSpaced>Best title ever</Heading>
+            <TextBox>
+                <Heading letterSpaced>Best title ever</Heading>
+<Subtitle>how about / a subtitle / too</Subtitle>
+            </TextBox>
         </StyledHero>
     )
 }

@@ -1,25 +1,26 @@
 import React from 'react';
 import styled from "styled-components";
-import {Colors} from "./theme";
+import {Colors} from "./theme/theme";
 import './App.css';
 import Hero from "./components/Hero";
 import Section from "./components/layout/Section";
+import Heading from "./components/basic/Heading";
+import Navigation from "./components/Navigation";
 
 const Body = styled.div`
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
     background-color: ${Colors.background};
     color: whitesmoke;
+    
+    p, li {
+      font-size: 1.7rem;
+      list-style: none;
+    }
 `
 
 const Header = styled.header``
 const Main = styled.main`
-    display: flex; 
-    flex-direction: column;
     padding: 3rem;
-    
+    text-align: center;
 `
 
 const App = () => {
@@ -28,22 +29,21 @@ const App = () => {
             <Header>
                 <Hero/>
             </Header>
+            <Navigation/>
             <Main>
                 <Section>
-                    <h2>About me</h2>
-                    <p>Professionally connected with the web development industry and information technology for many
+                    <Heading>About me</Heading>
+                    <p>Professionally connected with the web development industry and information technology for several
                         years.</p>
-                    <p>Well-organised person, problem solver, independent employee with high attention to detail. Fan of
-                        MMA, outdoor activities, TV series and, recently, English literature. A family person, father of
-                        two
-                        fractious boys, therefore remote employment is preferred..</p>
-                    <p>Professionally connected with the web development industry and information technology for many
-                        years.</p>
+                    <p>Well-organised person, problem solver, independent employee with high attention to detail.</p>
+                    <p> Fan of
+                        Magic: the Gathering, camping, video games and a good wine tasting. </p>
+
                 </Section>
                 <Section>
-                    <h2>Skills</h2>
-                    <p>The main area of my expertise is front end development (client side of the web).</p>
-                    <p>HTML, CSS, JS (TypeScript), building small and medium web apps with Angular 2+, custom plugins,
+                    <Heading>Skills</Heading>
+                    <p>My main area of expertise is front end development (the client side of the web).</p>
+                    <p>HTML, CSS, JS, building small and medium web apps with React, API integration,
                         features, animations, and coding interactive layouts.</p>
                     <ul>
                         <li>HTML</li>
@@ -55,8 +55,8 @@ const App = () => {
                     </ul>
                 </Section>
                 <Section>
-                    <h2>Showcase</h2>
-                    <h2>I've worked on</h2>
+                    <Heading>Showcase</Heading>
+                    <p>I've worked on</p>
                     <ul>
                         <li>
                             Sweepsouth
@@ -66,13 +66,16 @@ const App = () => {
                         </li>
                         <li>
                             Porfolio Site Placeholder
+                        </li> <li>
+                            This!
                         </li>
                     </ul>
                 </Section>
                 <Section>
-                    <h2>Contact</h2>
+                    <Heading>Contact</Heading>
                 </Section>
             </Main>
+            <footer><p>This is a footer</p></footer>
         </Body>
     );
 }

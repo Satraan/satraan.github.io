@@ -2,8 +2,9 @@ import React from 'react';
 import styled from "styled-components";
 
 const StyledSection = styled.section`
-display: block;
-width: 100%;
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 5rem 0;
 `
 
 const Section = ({children}) => {

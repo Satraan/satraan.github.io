@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Colors} from "../theme/theme"
 
+
 const Nav = styled.nav`
     position: fixed;
     right: 6rem;
@@ -22,8 +23,11 @@ const Item = styled.div`
     font-size: 1.6rem;
 `
 
+const Icon = styled.i`
+  font-size: 4rem;
+  color:${Colors.white};
+`
 const Link = styled.a`
-
 `
 
 
@@ -35,7 +39,7 @@ const Navigation = ({}) => {
 
             <Item>
                 <Link>
-                    &uarr;
+                    <Icon className="icon-rocket-ship"/>
                 </Link>
 
             </Item>

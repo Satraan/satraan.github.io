@@ -4,13 +4,13 @@ import {Colors} from "../theme/theme"
 
 
 const Nav = styled.nav`
-    position: fixed;
+    position: sticky;
     right: 6rem;
-    top: 6rem;
+    top: 5rem;
     display: flex;
     flex-direction: column;
-    min-height: 80px;
-    min-width: 80px;
+    height: 80px;
+    width: 80px;
     background-color: ${Colors.primaryDarker};
     border: 2px solid ${Colors.primary};
     color: ${Colors.primary};

@@ -9,7 +9,7 @@ import Navigation from "./components/Navigation";
 import Showcase from "./components/Showcase";
 import Profile from "./components/Profile";
 import {IconMoon} from "./assets/icons/complexIcons";
-import MartianBackground from "./assets/img/Martian.png"
+import asteroidBackground from "./assets/img/SpaceBack1.svg";
 import {Column, Row} from "./components/basic/Grid";
 
 const Body = styled.div`
@@ -24,15 +24,25 @@ const Body = styled.div`
 
 const Header = styled.header``
 const Main = styled.main`
+padding-top:30vh;
+  border-top:5px solid ${Colors.primaryDarker};
+
+background-image: linear-gradient(
+                 to bottom,
+                  rgba(${Colors.primaryDarkerRGB}, 0.9),
+                  rgba(${Colors.primaryLightRGB}, 0.1)),
+                  url(${asteroidBackground});
+      background-size:cover ;
     text-align: center;
 `
 
 const ContactSectionWrapper = styled.div`
-    background-image: linear-gradient(
-                  to right bottom,
-                  rgba(${Colors.primaryRGB}, 0.8),
-                  rgba(${Colors.primaryDarkerRGB}, 0.8)),url(${MartianBackground});
-    background-size: cover;
+    // background-image: linear-gradient(
+    //              to right bottom,
+    //               rgba(${Colors.primaryDarkRGB}, 0.5),
+    //               rgba(${Colors.primaryDarkerRGB}, 0.2)),
+    //               url(${asteroidBackground});
+    background-size: auto;
     background-position: center;
     height: 100vh;
 `
@@ -43,9 +53,11 @@ const App = () => {
         <Body>
             <Header>
                 <Hero/>
+
             </Header>
-            <Navigation/>
             <Main>
+                <Navigation/>
+
                 <Section>
                     <Heading><IconMoon/> About me </Heading>
                     <Profile/>
@@ -218,7 +230,6 @@ const App = () => {
                     </ul>
                 </Section>
                 <ContactSectionWrapper>
-
                     <Section>
                         <Heading><IconMoon/> Contact</Heading>
                     </Section>

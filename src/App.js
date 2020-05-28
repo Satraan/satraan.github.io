@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import {Colors} from "./theme/theme";
 import './App.css';
 import Hero from "./components/Hero";
@@ -7,10 +7,12 @@ import Section from "./components/layout/Section";
 import Heading from "./components/basic/Heading";
 import Navigation from "./components/Navigation";
 import Showcase from "./components/Showcase";
+import Form from "./components/Form";
 import Profile from "./components/Profile";
+import Skills from "./components/Skills";
 import {IconMoon} from "./assets/icons/complexIcons";
 import asteroidBackground from "./assets/img/SpaceBack1.svg";
-import {Column, Row} from "./components/basic/Grid";
+import planetfall from "./assets/img/Planetfall.svg";
 
 const Body = styled.div`
     background-color: ${Colors.background};
@@ -24,65 +26,87 @@ const Body = styled.div`
 
 const Header = styled.header``
 const Main = styled.main`
-padding-top:30vh;
+  padding-top:45vh;
   border-top:5px solid ${Colors.primaryDarker};
 
-background-image: linear-gradient(
+  background-image: linear-gradient(
                  to bottom,
                   rgba(${Colors.primaryDarkerRGB}, 0.9),
                   rgba(${Colors.primaryLightRGB}, 0.1)),
                   url(${asteroidBackground});
-      background-size:cover ;
-    text-align: center;
+  background-size:cover ;
+  text-align: center;
 `
 
 const ContactSectionWrapper = styled.div`
-    // background-image: linear-gradient(
-    //              to right bottom,
-    //               rgba(${Colors.primaryDarkRGB}, 0.5),
-    //               rgba(${Colors.primaryDarkerRGB}, 0.2)),
-    //               url(${asteroidBackground});
-    background-size: auto;
-    background-position: center;
     height: 100vh;
+    margin-bottom: 10vh;
+`
+const spinRight = keyframes`
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+`
+const RotatingMoon = styled.div`
+font-size: 4rem;
+   -webkit-animation: ${spinRight} 15s linear infinite;
+    animation: ${spinRight} 15s linear infinite;
 `
 
+const FooterDivider = styled.div`
+  bottom: 0;
+  left: 0;
+  right:0;
+  height:40vh;
+  z-index: 100;
+  background-position: top;
+  background-image: url(${planetfall});
+`
+
+const Footer = styled.footer`
+background-color: #3701b9;
+`
 
 const App = () => {
     return (
         <Body>
             <Header>
                 <Hero/>
-
             </Header>
             <Main>
                 <Navigation/>
-
                 <Section>
-                    <Heading><IconMoon/> About me </Heading>
+                    <RotatingMoon>
+                        <IconMoon/>
+                    </RotatingMoon>
+                    <Heading> About me </Heading>
                     <Profile/>
-
-
                 </Section>
                 <Section>
-                    <Heading><IconMoon/> Skills</Heading>
+                    <RotatingMoon>
+                        <IconMoon/>
+                    </RotatingMoon>
+                    <Heading>
+
+                        Skills</Heading>
+
                     <p>My main area of expertise is front end development (the client side of the
                         web).</p>
-                    <p>HTML, CSS, JS, building small and medium web apps with React, API
-                        integration,
-                        features, animations, and coding interactive layouts.</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JS</li>
-                        <li>React</li>
-                        <li>Python</li>
-                        <li>Git</li>
-                    </ul>
+                    <p>I'm proficient with building small and medium web apps with React, API
+                        integration, animations, responsiveness, and coding interactive layouts.</p>
+                    <br/>
+                    <Skills/>
                 </Section>
 
                 <Section>
-                    <Heading><IconMoon/> Showcase</Heading>
+                    <RotatingMoon>
+                        <IconMoon/>
+                    </RotatingMoon>
+                    <Heading>Showcase</Heading>
                     <ul>
                         <li>
 
@@ -204,39 +228,47 @@ const App = () => {
                                 </ul>
                             </Showcase>
                         </li>
-                        <li>
-                            <Showcase title={"This!"}
-                                      src={"https://www.doubleexposure.co/assets/app/logos/logo-doubleexposure-1000x161-6d78231d57d346694d56c15552c280f7.png"}
-                                      link={"https://www.doubleexposure.co/"}
-                                      tags={["HTML", "SCSS", "React", "styled-components", "Firebase"]}>
-                                <ul>
-                                    <li>
-                                        Personal portfolio site
-                                    </li>
-                                </ul>
+                        {/*<li>*/}
+                        {/*    <Showcase title={"This!"}*/}
+                        {/*              src={"https://www.doubleexposure.co/assets/app/logos/logo-doubleexposure-1000x161-6d78231d57d346694d56c15552c280f7.png"}*/}
+                        {/*              link={"https://www.doubleexposure.co/"}*/}
+                        {/*              tags={["HTML", "SCSS", "React", "styled-components", "Firebase"]}>*/}
+                        {/*        <ul>*/}
+                        {/*            <li>*/}
+                        {/*                Personal portfolio site*/}
+                        {/*            </li>*/}
+                        {/*        </ul>*/}
 
-                                <ul>
-                                    <lh> Technical specs:</lh>
-                                    <li>
-                                        Basic React app
-                                    </li>
-                                    <li>Styled-components for CSS-in-JSX</li>
-                                    <li>Google analytics</li>
-                                    <li>Hosted on firebase</li>
-                                </ul>
-                            </Showcase>
-                        </li>
+                        {/*        <ul>*/}
+                        {/*            <lh> Technical specs:</lh>*/}
+                        {/*            <li>*/}
+                        {/*                Basic React app*/}
+                        {/*            </li>*/}
+                        {/*            <li>Styled-components for CSS-in-JSX</li>*/}
+                        {/*            <li>Google analytics</li>*/}
+                        {/*            <li>Hosted on firebase</li>*/}
+                        {/*        </ul>*/}
+                        {/*    </Showcase>*/}
+                        {/*</li>*/}
 
                     </ul>
                 </Section>
                 <ContactSectionWrapper>
                     <Section>
-                        <Heading><IconMoon/> Contact</Heading>
+                        <RotatingMoon>
+                            <IconMoon/>
+                        </RotatingMoon>
+                        <Heading> Contact</Heading>
+                        <Form/>
                     </Section>
 
                 </ContactSectionWrapper>
+                <FooterDivider/>
             </Main>
-            <footer><p>This is a footer</p></footer>
+            <Footer>
+                <p>This is a footer</p>
+            <p>Built & designed by Mandia Roux</p>
+            </Footer>
         </Body>
     );
 }

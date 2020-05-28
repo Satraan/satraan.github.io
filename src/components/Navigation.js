@@ -2,15 +2,22 @@ import React from 'react';
 import styled from "styled-components";
 import {Colors} from "../theme/theme"
 
+const StickyContainer = styled.div`
+ top: 5rem;
+    position: sticky;
+
+`
 
 const Nav = styled.nav`
-    position: sticky;
-    right: 6rem;
-    top: 5rem;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    
     display: flex;
     flex-direction: column;
-    height: 80px;
+    
     width: 80px;
+    
     background-color: ${Colors.primaryDarker};
     border: 2px solid ${Colors.primary};
     color: ${Colors.primary};
@@ -21,11 +28,14 @@ const Item = styled.div`
     display: block;
     height: 40px;
     font-size: 1.6rem;
+    &:not(:last-child){
+    margin-bottom: 1rem;
+    }
 `
 
 const Icon = styled.i`
   font-size: 4rem;
-  color:${Colors.white};
+  color:${Colors.primary};
 `
 const Link = styled.a`
 `
@@ -34,6 +44,8 @@ const Link = styled.a`
 const Navigation = ({}) => {
 
     return (
+
+<StickyContainer>
 
         <Nav>
 
@@ -64,6 +76,7 @@ const Navigation = ({}) => {
 
         </Nav>
 
+</StickyContainer>
     )
 }
 

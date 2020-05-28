@@ -3,18 +3,25 @@ import styled from "styled-components";
 import {Row, Column} from "../components/basic/Grid"
 import {Colors} from "../theme/theme";
 
-const Header = styled.h1``
 
 const StyledShowcase = styled.div`
     position: relative;
     display: flex;
     justify-content: space-between;
-    
-    
     width: 100%;
     margin-bottom: 5rem;
     padding: 3rem 1rem;
     background-color: rgba( ${Colors.primaryDarkRGB}, .8);
+    
+    ul {
+    text-align: left;
+    width: 30%;
+    }
+   
+    ul:not(:last-child) {
+      border-right: 2px dotted ${Colors.secondary};
+      padding-right:10px;
+    }
 
 `
 const Preview = styled.a`

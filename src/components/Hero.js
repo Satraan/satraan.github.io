@@ -2,9 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Heading from "./basic/Heading";
 import {Colors} from "../theme/theme";
-// import background from "../assets/img/Martian_neon.png";
 import background from "../assets/img/MartiangreyNoPlanet.svg";
-import Comet from "./animations/Comet";
 import RocketBackground from "../assets/img/RocketBGTrans.svg";
 
 const Subtitle = styled.h3`
@@ -35,22 +33,23 @@ const StyledHero = styled.div`
 `
 
 const RocketShip = styled.span`
-position: absolute;
-bottom:0;
-left: 0;
-right:0;
-height:140vh;
-background-image:url(${RocketBackground}) ;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-z-index: 400;
-transform: translateY(40%);
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right:0;
+    height:140vh;
+    background-image:url(${RocketBackground}) ;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 400;
+    transform: translateY(40%);
 `
+
 const Hero = () => {
     return (
         <React.Fragment>
-        {/*<Comet/>*/}
         <StyledHero>
             <TextBox>
                 <Heading letterSpaced>Mandia Roux</Heading>

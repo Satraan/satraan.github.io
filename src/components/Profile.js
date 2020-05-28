@@ -70,19 +70,21 @@ const Profile = ({}) => {
     return (
         <Container>
             <ImageContainer>
-                <PlanetContainer>
-                    <Rotation>
-                        <Planet/>
-                    </Rotation>
+                {/*<PlanetContainer>*/}
+                {/*    <Rotation>*/}
+                {/*        <Planet/>*/}
+                {/*    </Rotation>*/}
                     <Image
                         src={"https://scontent.fcpt7-1.fna.fbcdn.net/v/t1.0-9/72942488_2732566853462038_5769936916023607296_n.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeHlVhSUzTsyJZDCvF2GUtSBJwiAMivt3F8nCIAyK-3cX23Z-BXieOCVV-S7x-AcXgzP_-4ume-IlBcoJZ77rMh3&_nc_ohc=LTtSjxCUBfkAX-2G2CK&_nc_ht=scontent.fcpt7-1.fna&oh=b67dfad156339f00a3040d0fd6389eda&oe=5EF22F5E"}/>
-                </PlanetContainer>
+                {/*</PlanetContainer>*/}
             </ImageContainer>
             <p>Professionally connected with the web development industry and information technology
                 for several
-                years.Well-organised person, problem solver, independent employee with high
-                attention to detail.Fan of
-                Magic: the Gathering, camping, video games and a good wine tasting. </p>
+                years.
+                <br/>
+                Well-organised person, problem solver, independent employee with high
+                attention to detail.
+                <br/> Fan of Magic: the Gathering, camping, video games and a good wine tasting. </p>
         </Container>
 
     )

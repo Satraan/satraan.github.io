@@ -8,9 +8,10 @@ export const Colors = {
     primaryLight: "#cfe6fd",
     primaryLightRGB:"207, 230, 253",
 
+    secondary: "#7657d5",
+
     background: "#03091c",
 
-    secondary: "#556cd6",
     white: "white",
     coolGrey: "#edecea",
     grey: "#bebebe",

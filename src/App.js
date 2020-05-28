@@ -69,6 +69,7 @@ const FooterDivider = styled.div`
 
 const Footer = styled.footer`
 background-color: #3701b9;
+//height:200px;
 `
 
 const App = () => {

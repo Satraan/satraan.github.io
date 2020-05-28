@@ -11,7 +11,8 @@ const StyledShowcase = styled.div`
     width: 100%;
     margin-bottom: 5rem;
     padding: 3rem 1rem;
-    background-color: rgba( ${Colors.primaryDarkRGB}, .8);
+    border: 3px solid rgba( ${Colors.primaryRGB}, .8);
+    // background-color: rgba( ${Colors.primaryRGB}, .8);
     
     ul {
     text-align: left;
@@ -35,22 +36,24 @@ background-repeat: no-repeat;
 `
 const Heading = styled.h3``
 
-const TagContainer = styled.div`
-position: absolute;
-bottom:0;
-`
+
 
 const Content = styled.div`
 display: flex;
 text-align:left;
 `
-const Tag = styled.span`
-background-color: ${Colors.primaryLight};
-color: ${Colors.primaryDarker};
 
-margin: 0 3px;
-padding: .5rem;
-border-radius: 3px;
+const TagContainer = styled.div`
+position: absolute;
+bottom:5px;
+`
+const Tag = styled.span`
+    background-color: ${Colors.primaryLight};
+    color: ${Colors.primaryDarker};
+    
+    margin: 0 3px;
+    padding: .5rem;
+    border-radius: 3px;
 `
 
 const Showcase = ({title, children, src, link, tags = []}) => {

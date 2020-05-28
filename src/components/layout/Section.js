@@ -1,10 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
+import {Colors} from "../../theme/theme";
 
 const StyledSection = styled.section`
     margin: 0 auto;
     max-width: 80%;
-    padding: 5rem 0;
+    padding: 3rem 3rem 6rem 3rem;
+    border-radius: 5px;
+    background-color: rgba(${Colors.primaryRGB}, .2);
+    
+    &:not(:last-child){
+      margin-bottom: 4rem;
+    }
 `
 
 const Section = ({children}) => {

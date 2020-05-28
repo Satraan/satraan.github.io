@@ -2,14 +2,22 @@ import React from 'react';
 import styled from "styled-components";
 import {Colors} from "../theme/theme"
 
+const StickyContainer = styled.div`
+ top: 5rem;
+    position: sticky;
+
+`
+
 const Nav = styled.nav`
-    position: fixed;
-    right: 6rem;
-    top: 6rem;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    
     display: flex;
     flex-direction: column;
-    min-height: 80px;
-    min-width: 80px;
+    
+    width: 80px;
+    
     background-color: ${Colors.primaryDarker};
     border: 2px solid ${Colors.primary};
     color: ${Colors.primary};
@@ -20,10 +28,16 @@ const Item = styled.div`
     display: block;
     height: 40px;
     font-size: 1.6rem;
+    &:not(:last-child){
+    margin-bottom: 1rem;
+    }
 `
 
+const Icon = styled.i`
+  font-size: 4rem;
+  color:${Colors.primary};
+`
 const Link = styled.a`
-
 `
 
 
@@ -31,11 +45,13 @@ const Navigation = ({}) => {
 
     return (
 
+<StickyContainer>
+
         <Nav>
 
             <Item>
                 <Link>
-                    &uarr;
+                    <Icon className="icon-rocket-ship"/>
                 </Link>
 
             </Item>
@@ -60,6 +76,7 @@ const Navigation = ({}) => {
 
         </Nav>
 
+</StickyContainer>
     )
 }
 

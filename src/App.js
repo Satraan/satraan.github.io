@@ -2,7 +2,6 @@ import React from 'react';
 import styled, {keyframes} from "styled-components";
 import {Colors} from "./theme/theme";
 import './App.css';
-import Hero from "./components/Hero";
 import Section from "./components/layout/Section";
 import Heading from "./components/basic/Heading";
 import Navigation from "./components/Navigation";
@@ -13,6 +12,7 @@ import Skills from "./components/Skills";
 import {IconMoon} from "./assets/icons/complexIcons";
 import asteroidBackground from "./assets/img/SpaceBack1.svg";
 import planetfall from "./assets/img/Planetfall.svg";
+import SpinningPlanet from "./components/animations/SpinningPlanet";
 
 const Body = styled.div`
     background-color: ${Colors.background};
@@ -72,15 +72,34 @@ background-color: #3701b9;
 //height:200px;
 `
 
+// const IconVenus = styled.div`
+//   height: 40px;
+//   width: 40px;
+//   margin:0 auto;
+//   background-image: url(${venus});
+//   background-position: center;
+//   background-size: contain;
+//   -webkit-animation: ${spinRight} 15s linear infinite;
+//   animation: ${spinRight} 15s linear infinite;
+// `
+
 const App = () => {
     return (
         <Body>
-            <Header>
-                <Hero/>
-            </Header>
+            {/*<Header>*/}
+            {/*    <Hero/>*/}
+            {/*</Header>*/}
             <Main>
                 <Navigation/>
+                {/*<SpinningPlanet variant={"venus"}/>*/}
+                {/*<SpinningPlanet variant={"earth"}/>*/}
+                {/*<SpinningPlanet variant={"mars"}/>*/}
+                {/*<SpinningPlanet variant={"uranus"}/>*/}
+                {/*<SpinningPlanet variant={"neptune"}/>*/}
+                {/*<SpinningPlanet variant={"jupiter"}/>*/}
+                {/*<SpinningPlanet variant={"saturn"}/>*/}
                 <Section>
+
                     <RotatingMoon>
                         <IconMoon/>
                     </RotatingMoon>
@@ -88,12 +107,10 @@ const App = () => {
                     <Profile/>
                 </Section>
                 <Section>
-                    <RotatingMoon>
-                        <IconMoon/>
-                    </RotatingMoon>
+                    <SpinningPlanet variant={"neptune"}/>
                     <Heading>
-
-                        Skills</Heading>
+                        Skills
+                    </Heading>
 
                     <p>My main area of expertise is front end development (the client side of the
                         web).</p>
@@ -104,9 +121,7 @@ const App = () => {
                 </Section>
 
                 <Section>
-                    <RotatingMoon>
-                        <IconMoon/>
-                    </RotatingMoon>
+                    <SpinningPlanet variant={"venus"}/>
                     <Heading>Showcase</Heading>
                     <ul>
                         <li>
@@ -256,9 +271,7 @@ const App = () => {
                 </Section>
                 <ContactSectionWrapper>
                     <Section>
-                        <RotatingMoon>
-                            <IconMoon/>
-                        </RotatingMoon>
+                        <SpinningPlanet variant={"jupiter"}/>
                         <Heading> Contact</Heading>
                         <Form/>
                     </Section>
@@ -268,7 +281,7 @@ const App = () => {
             </Main>
             <Footer>
                 <p>This is a footer</p>
-            <p>Built & designed by Mandia Roux</p>
+                <p>Built & designed by Mandia Roux</p>
             </Footer>
         </Body>
     );

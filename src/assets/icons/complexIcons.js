@@ -1,8 +1,12 @@
 import React from "react";
+import styled from "styled-components";
+const Moon = styled.span`
+font-size: 4rem;
+`
 
 const IconMoon = () => {
     return (
-        <span className="icon-moon">
+        <Moon className="icon-moon">
             <span className="path1"></span>
             <span className="path2"></span>
             <span
@@ -23,7 +27,7 @@ const IconMoon = () => {
             <span className="path14"></span><span
             className="path15"></span>
             <span className="path16"></span>
-        </span>
+        </Moon>
 
     )
 }

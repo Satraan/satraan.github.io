@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components'
 import {IconMoon} from "../assets/icons/complexIcons";
+import Picture from "../assets/img/Me.jpeg";
+import {Colors} from "../theme/theme";
 
 const spinRight = keyframes`
     100% {
@@ -14,9 +16,8 @@ const spinRight = keyframes`
 
 const Container = styled.div`
   display: flex;
-  p {
-  width: 50%;
-  }
+  align-items: center;
+  
 `
 const PlanetContainer = styled.div`
  position: relative;
@@ -53,16 +54,22 @@ const Rotation = styled.div`
     
 `
 
+const Content = styled.div`
+margin-left: 400px;
+text-align: left;
+`
 const ImageContainer = styled.div`
   width: 400px;
-  position: relative;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
 `
 
 const Image = styled.img`
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
-
+  border: solid 3px ${Colors.primary};
 
 `
 
@@ -75,16 +82,18 @@ const Profile = ({}) => {
                 {/*        <Planet/>*/}
                 {/*    </Rotation>*/}
                     <Image
-                        src={"https://scontent.fcpt7-1.fna.fbcdn.net/v/t1.0-9/72942488_2732566853462038_5769936916023607296_n.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeHlVhSUzTsyJZDCvF2GUtSBJwiAMivt3F8nCIAyK-3cX23Z-BXieOCVV-S7x-AcXgzP_-4ume-IlBcoJZ77rMh3&_nc_ohc=LTtSjxCUBfkAX-2G2CK&_nc_ht=scontent.fcpt7-1.fna&oh=b67dfad156339f00a3040d0fd6389eda&oe=5EF22F5E"}/>
+                        src={Picture}/>
                 {/*</PlanetContainer>*/}
             </ImageContainer>
-            <p>Professionally connected with the web development industry and information technology
-                for several
-                years.
-                <br/>
-                Well-organised person, problem solver, independent employee with high
-                attention to detail.
-                <br/> Fan of Magic: the Gathering, camping, video games and a good wine tasting. </p>
+            <Content>
+                <p>Professionally connected with the web development industry and information technology
+                    for several
+                    years.
+                    Well-organised person, problem solver, independent employee with high
+                    attention to detail.
+                    <br/> Fan of Magic: the Gathering, camping, video games and a good wine tasting. </p>
+            </Content>
+
         </Container>
 
     )

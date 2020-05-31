@@ -13,7 +13,7 @@ import {IconMoon} from "./assets/icons/complexIcons";
 import asteroidBackground from "./assets/img/SpaceBack1.svg";
 import planetfall from "./assets/img/Planetfall.svg";
 import SpinningPlanet from "./components/animations/SpinningPlanet";
-
+import Hero from "./components/Hero";
 const Body = styled.div`
     background-color: ${Colors.background};
     color: whitesmoke;
@@ -52,7 +52,6 @@ const spinRight = keyframes`
     }
 `
 const RotatingMoon = styled.div`
-font-size: 4rem;
    -webkit-animation: ${spinRight} 15s linear infinite;
     animation: ${spinRight} 15s linear infinite;
 `
@@ -86,18 +85,11 @@ background-color: #3701b9;
 const App = () => {
     return (
         <Body>
-            {/*<Header>*/}
-            {/*    <Hero/>*/}
-            {/*</Header>*/}
+            <Header>
+                <Hero/>
+            </Header>
             <Main>
                 <Navigation/>
-                {/*<SpinningPlanet variant={"venus"}/>*/}
-                {/*<SpinningPlanet variant={"earth"}/>*/}
-                {/*<SpinningPlanet variant={"mars"}/>*/}
-                {/*<SpinningPlanet variant={"uranus"}/>*/}
-                {/*<SpinningPlanet variant={"neptune"}/>*/}
-                {/*<SpinningPlanet variant={"jupiter"}/>*/}
-                {/*<SpinningPlanet variant={"saturn"}/>*/}
                 <Section>
 
                     <RotatingMoon>

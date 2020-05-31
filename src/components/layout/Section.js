@@ -7,6 +7,7 @@ const StyledSection = styled.section`
     max-width: 80%;
     padding: 3rem 3rem 6rem 3rem;
     border-radius: 5px;
+    position: relative;
     background-color: rgba(${Colors.primaryRGB}, .2);
     
     &:not(:last-child){

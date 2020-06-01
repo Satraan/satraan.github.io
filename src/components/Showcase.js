@@ -5,61 +5,68 @@ import {Colors} from "../theme/theme";
 
 
 const StyledShowcase = styled.div`
-    position: relative;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    margin-bottom: 5rem;
-    padding: 3rem 1rem;
+    position: relative;
+    margin: 1rem;
+    padding: 3rem 2rem 4rem 2rem;
     border: 3px solid rgba( ${Colors.primaryRGB}, .8);
-    // background-color: rgba( ${Colors.primaryRGB}, .8);
+   
+    
     
     ul {
-    text-align: left;
-    width: 30%;
+      text-align: center;
     }
    
-    ul:not(:last-child) {
-      border-right: 2px dotted ${Colors.secondary};
+    ul:last-child {
+      //border-left: 2px dotted ${Colors.secondary};
       padding-right:10px;
     }
 
 `
+
+
+
 const Preview = styled.a`
-display: inline-block;
-background-image: url(${props => props.src});
-width: 30rem;
-height: 20rem;
-background-position: center;
-background-size: contain;
-background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url(${props => props.src});
+    width: 90%;
+    height: 7rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+            margin: 0 auto;
+
+    //position:absolute;
+    //top:50%;
+    //transform: translateY(-50%);
 `
-const Heading = styled.h3``
 
 
 
-const Content = styled.div`
-display: flex;
-text-align:left;
-`
 
 const TagContainer = styled.div`
 position: absolute;
+display: flex;
+align-content: space-between;
 bottom:5px;
+left: 50%;
+transform: translateX(-50%);
+font-size: 1.5rem;
 `
-const Tag = styled.span`
-    background-color: ${Colors.primaryLight};
-    color: ${Colors.primaryDarker};
+const Tag = styled.div`
+    background-color: ${Colors.primary};
+    color: ${Colors.white};
     
     margin: 0 3px;
     padding: .5rem;
     border-radius: 3px;
 `
-
+const Content = styled.div`
+  margin-bottom: 2rem;
+`
 const Showcase = ({title, children, src, link, tags = []}) => {
     return (
         <StyledShowcase>
-                <i className={"icon-moon"}/>
                 <Preview target={"_blank"} href={link}
                          src={src}>
                 </Preview>
@@ -68,8 +75,9 @@ const Showcase = ({title, children, src, link, tags = []}) => {
                         return <Tag>{tag}</Tag>
                     })}
                 </TagContainer>
-
+<Content>
                 {children}
+</Content>
         </StyledShowcase>
 
     )

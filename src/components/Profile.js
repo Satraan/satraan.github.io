@@ -17,7 +17,7 @@ const spinRight = keyframes`
 const Container = styled.div`
   display: flex;
   align-items: center;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   
 `
 const PlanetContainer = styled.div`
@@ -61,7 +61,8 @@ text-align: left;
 margin: 0 auto;
 p {
   max-width: 850px;
-    margin-top:1rem;
+  margin-top:1rem;
+  
 
 }
 `

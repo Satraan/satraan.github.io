@@ -42,15 +42,15 @@ const Timeline = styled.div`
     justify-content: space-evenly;
     border-bottom: 2px solid ${Colors.secondary};
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 `
 
 const skillList = [
-    {label: "Python", level: "30%"},
-    {label: "React", level: "35%"},
-    {label: "Groovy", level: "60%"},
-    {label: "JavaScript", level: "100%"},
     {label: "HTML & CSS", level: "100%"},
+    {label: "JavaScript", level: "100%"},
+    {label: "Groovy", level: "60%"},
+    {label: "React", level: "35%"},
+    {label: "Python", level: "30%"},
 ]
 
 const Skills = ({}) => {

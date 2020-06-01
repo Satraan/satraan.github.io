@@ -17,6 +17,7 @@ const spinRight = keyframes`
 const Container = styled.div`
   display: flex;
   align-items: center;
+  padding-bottom: 4rem;
   
 `
 const PlanetContainer = styled.div`
@@ -55,43 +56,57 @@ const Rotation = styled.div`
 `
 
 const Content = styled.div`
-margin-left: 400px;
+//margin-left: 400px;
 text-align: left;
+margin: 0 auto;
+p {
+  max-width: 850px;
+    margin-top:1rem;
+
+}
 `
 const ImageContainer = styled.div`
-  width: 400px;
-  position: absolute;
+  width: 40rem;
   top:50%;
-  transform: translateY(-50%);
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  float: left;
 `
 
 const Image = styled.img`
-  height: 20rem;
-  width: 20rem;
+  height: 22rem;
+  width: 22rem;
   border-radius: 50%;
   border: solid 3px ${Colors.primary};
+  float: left;
+   shape-outside: circle(50%);
+   
+   margin:0  4rem;
 
 `
 
 const Profile = ({}) => {
     return (
         <Container>
-            <ImageContainer>
-                {/*<PlanetContainer>*/}
-                {/*    <Rotation>*/}
-                {/*        <Planet/>*/}
-                {/*    </Rotation>*/}
-                    <Image
-                        src={Picture}/>
-                {/*</PlanetContainer>*/}
-            </ImageContainer>
+            {/*<ImageContainer>*/}
+            {/*<PlanetContainer>*/}
+            {/*    <Rotation>*/}
+            {/*        <Planet/>*/}
+            {/*    </Rotation>*/}
+
+            {/*</PlanetContainer>*/}
+            {/*</ImageContainer>*/}
             <Content>
-                <p>Professionally connected with the web development industry and information technology
-                    for several
-                    years.
-                    Well-organised person, problem solver, independent employee with high
-                    attention to detail.
-                    <br/> Fan of Magic: the Gathering, camping, video games and a good wine tasting. </p>
+                <Image
+                    src={Picture}/>
+                <p>I'm a full-time Frontend Engineer based in Cape Town, South Africa. <br/>
+                    I enjoy turning complex problems into simple, beautiful and intuitive
+                    designs. I have experience working in a dynamic startup, as well as in an agency where
+                    deadlines were critical.
+                    When I'm not coding, closing tickets or pushing pixels, you'll find me jamming
+                    video games,
+                    gardening or playing Magic: the Gathering.
+                </p>
             </Content>
 
         </Container>

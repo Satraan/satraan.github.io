@@ -40,8 +40,9 @@ const Timeline = styled.div`
     width:100%;
     display: flex;
     justify-content: space-evenly;
-    border-top: 2px solid ${Colors.secondary};
+    border-bottom: 2px solid ${Colors.secondary};
     font-size: 1.6rem;
+    margin-bottom: 1rem;
 `
 
 const skillList = [
@@ -55,7 +56,15 @@ const skillList = [
 const Skills = ({}) => {
     return (
         <React.Fragment>
-
+            <Timeline>
+                <div>1 Year</div>
+                <div></div>
+                <div>1.5 Year</div>
+                <div></div>
+                <div>2 Years</div>
+                <div></div>
+                <div>2.5 Years</div>
+            </Timeline>
             {skillList.map(skill => {
                 return (
                     <Skill>
@@ -67,15 +76,7 @@ const Skills = ({}) => {
                         </ProgressBar>
                     </Skill>)
             })}
-            <Timeline>
-                <div>1 Year</div>
-                <div></div>
-                <div>1.5 Year</div>
-                <div></div>
-                <div>2 Years</div>
-                <div></div>
-                <div>2.5 Years</div>
-            </Timeline>
+
         </React.Fragment>
 
 

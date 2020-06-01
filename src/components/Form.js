@@ -3,16 +3,14 @@ import {Colors} from "../theme/theme";
 import React from "react";
 
 const InputContainer = styled.div`
-    text-align: center;
+    text-align: left;
     color:white;
     display: block;
     width:100%;
     max-width: 600px;
     label {
-    text-align: left;
-      font-size: 1.2rem;
+        font-size: 1.2rem;
         font-weight: 700;
-        margin-left: 2rem;
         margin-top: .7rem;
         display: block;
         color: white;
@@ -28,6 +26,7 @@ const StyledForm = styled.form`
     padding:4rem;
     width: 60%;
     background-color: rgba(${Colors.primaryRGB}, .8);
+    text-align: left;
   
   input:placeholder-shown + label {
     opacity: 0;
@@ -37,6 +36,10 @@ const StyledForm = styled.form`
 
   textarea {
     resize: none;
+  }
+  
+  input {
+   border: none;
   }
   
   input, textarea {
@@ -82,10 +85,8 @@ export default class MyForm extends React.Component {
                 method="POST"
             >
                 <InputContainer>
-
                     <label>Email:</label>
                     <input type="email" name="email" placeholder={"example@gmail.com"} required/>
-
                 </InputContainer>
                 <InputContainer>
                     <label>Message:</label>

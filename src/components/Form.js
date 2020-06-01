@@ -9,7 +9,7 @@ const InputContainer = styled.div`
     width:100%;
     max-width: 600px;
     label {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         font-weight: 700;
         margin-top: .7rem;
         display: block;
@@ -18,15 +18,20 @@ const InputContainer = styled.div`
     }
 `
 
-const TextArea = styled.textarea``
+const TextArea = styled.textarea`
+margin-bottom: 1rem;
+`
 
 const StyledForm = styled.form`
+    text-align: center;
+    border: 3px solid rgba( ${Colors.primaryRGB}, .8);
     margin:0 auto;
     font-size: 1.6rem;
     padding:4rem;
-    width: 60%;
-    background-color: rgba(${Colors.primaryRGB}, .8);
-    text-align: left;
+    display: inline-block;
+    //background-color: rgba(${Colors.primaryRGB}, .8);
+    
+    width: 50%;
   
   input:placeholder-shown + label {
     opacity: 0;
@@ -34,11 +39,19 @@ const StyledForm = styled.form`
     transform: translateY(-4rem);
   }
 
+  
+
   textarea {
     resize: none;
   }
   
+  input::placeholder {
+   color: ${Colors.white};
+   display:none;
+  }
+  
   input {
+    color: ${Colors.white};
    border: none;
   }
   
@@ -49,22 +62,43 @@ const StyledForm = styled.form`
     padding: 1.5rem 2rem;
     border-radius: 5px;
     border-bottom: 3px solid transparent;
-    width: 90%;
+    width: 100%;
     transition: all .3s;
 
         &:focus {
           outline: none;
-          border-bottom: 3px solid blue;
+          border-bottom: 3px solid ${Colors.primary};
         }
     
         &:focus:invalid {
-          border-bottom: 3px solid purple;
+          border-bottom: 3px solid ${Colors.tertiary};
         }
     
         &::-webkit-input-placeholder {
-          color: black;
+          color: ${Colors.white};
         }
     }
+`
+
+const Input = styled.input`
+ 
+`
+
+const Button = styled.button`
+  padding:1.5rem 4.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: ${Colors.primary};
+  color: ${Colors.white};
+  box-shadow: none;
+  border:none;
+  outline:none;
+  
+  &:hover {
+    background-color: ${Colors.primaryLight};
+  }
+
 `
 
 export default class MyForm extends React.Component {
@@ -86,13 +120,13 @@ export default class MyForm extends React.Component {
             >
                 <InputContainer>
                     <label>Email:</label>
-                    <input type="email" name="email" placeholder={"example@gmail.com"} required/>
+                    <Input type="email" name="email"  required/>
                 </InputContainer>
                 <InputContainer>
                     <label>Message:</label>
-                    <TextArea type="textarea" name="message" required/>
+                    <TextArea type="textarea" name="message" rows="8" required/>
                 </InputContainer>
-                {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+                {status === "SUCCESS" ? <p>Thanks!</p> : <Button>Submit</Button>}
                 {status === "ERROR" && <p>Ooops! There was an error.</p>}
             </StyledForm>
         );

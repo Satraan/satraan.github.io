@@ -9,7 +9,7 @@ export const Colors = {
     primaryLightRGB:"207, 230, 253",
 
     secondary: "#7657d5",
-
+    tertiary: "#ff9d17",
     background: "#03091c",
 
     white: "white",

@@ -12,7 +12,40 @@ const animationFrames = keyframes`
         opacity: 1;
 }
 `
-
+const PlanetContainer = styled.div`
+ position: relative;
+    top: 25px;
+    left: 25px;
+    height: 300px;
+    width: 300px;
+`
+const Planet = styled(IconMoon)`
+    position: absolute;
+    top: 62px;
+    left: -6px;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    
+    
+`
+const Rotation = styled.div`
+     position: absolute;
+    top: -50px;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: ${spinRight} 15s linear infinite;
+    animation: ${spinRight} 15s linear infinite;
+    .icon-moon {    font-size: 4rem;
+    position: absolute;
+    left: 45px;
+    }
+    
+    
+`
 const spinRight = keyframes`
     100% {
         -webkit-transform: rotate(360deg);
@@ -75,7 +108,7 @@ const Rotation = styled.div`
     
     
 `
-const Comet = ({}) => {
+const Misc = ({}) => {
     return (
 
         // // <PlanetContainer>
@@ -87,4 +120,4 @@ const Comet = ({}) => {
     )
 }
 
-export default Comet
+export default Misc

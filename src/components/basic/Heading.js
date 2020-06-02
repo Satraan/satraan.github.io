@@ -6,6 +6,9 @@ const Header = styled.h1`
     font-weight: 700;
     ${props => props.letterSpaced && "letter-spacing: 1.7rem;"};
     
+    @media (max-width:425px){
+      margin-bottom: 2rem;
+    }
 `
 
 

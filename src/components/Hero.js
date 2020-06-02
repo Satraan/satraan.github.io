@@ -37,7 +37,8 @@ const RocketShip = styled.span`
     bottom:0;
     left: 0;
     right:0;
-    height:140vh;
+    height:100%;
+    width: 100%;
     background-image:url(${RocketBackground}) ;
     
     background-size: cover;

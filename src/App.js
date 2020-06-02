@@ -105,7 +105,6 @@ const App = () => {
             <Main>
                 {/*<Navigation/>*/}
                 <Section>
-
                     <RotatingMoon>
                         <IconMoon/>
                     </RotatingMoon>

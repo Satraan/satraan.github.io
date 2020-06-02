@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Row, Column} from "../components/basic/Grid"
-import {Colors} from "../theme/theme";
 
+import {Colors} from "../theme/theme";
 
 const StyledShowcase = styled.div`
     width: 100%;
@@ -12,23 +11,24 @@ const StyledShowcase = styled.div`
     border: 3px solid rgba( ${Colors.primaryRGB}, .8);
     transition: all .5s;
     transform: translateY(0);
-    ul {
-      text-align: center;
-    }
-   
-    ul:last-child {
-      //border-left: 2px dotted ${Colors.secondary};
-      padding-right:10px;
-    }
-
+    
     &:hover {
       background-color: rgba(${Colors.primaryRGB}, .8);
       cursor: pointer;
       box-shadow: 1px 8px 15px 2px ${Colors.primaryDarker};
       transform: translateY(-20px);
     }
+    
+    ul {
+      text-align: center;
+    }
+    ul:last-child {
+      padding-right:10px;
+    }
 
-  
+    @media (max-width:425px) {
+      margin: 1rem 0;
+    }
 
 `
 

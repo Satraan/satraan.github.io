@@ -8,11 +8,10 @@ const StyledShowcase = styled.div`
     width: 100%;
     position: relative;
     margin: 1rem;
-    padding: 3rem 2rem 4rem 2rem;
+    padding: 3rem 2rem 5rem 2rem;
     border: 3px solid rgba( ${Colors.primaryRGB}, .8);
-   
-    
-    
+    transition: all .5s;
+    transform: translateY(0);
     ul {
       text-align: center;
     }
@@ -20,6 +19,13 @@ const StyledShowcase = styled.div`
     ul:last-child {
       //border-left: 2px dotted ${Colors.secondary};
       padding-right:10px;
+    }
+
+    &:hover {
+      background-color: rgba(${Colors.primaryRGB}, .8);
+      cursor: pointer;
+      box-shadow: 1px 8px 15px 2px ${Colors.primaryDarker};
+      transform: translateY(-20px);
     }
 
 `
@@ -48,7 +54,7 @@ const TagContainer = styled.div`
 position: absolute;
 display: flex;
 align-content: space-between;
-bottom:5px;
+bottom:20px;
 left: 50%;
 transform: translateX(-50%);
 font-size: 1.5rem;

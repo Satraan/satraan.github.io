@@ -95,7 +95,7 @@ const App = () => {
                 <Hero/>
             </Header>
             <Main>
-                <Navigation/>
+                {/*<Navigation/>*/}
                 <Section>
 
                     <RotatingMoon>
@@ -237,8 +237,7 @@ const App = () => {
                 <FooterDivider/>
             </Main>
             <Footer>
-                <p>This is a footer</p>
-                <p>Built & designed by Mandia Roux</p>
+
             </Footer>
         </Body>
     );

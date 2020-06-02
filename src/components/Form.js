@@ -20,6 +20,7 @@ const InputContainer = styled.div`
 
 const TextArea = styled.textarea`
 margin-bottom: 1rem;
+color:${Colors.white};
 `
 
 const StyledForm = styled.form`

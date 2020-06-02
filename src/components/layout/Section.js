@@ -13,6 +13,12 @@ const StyledSection = styled.section`
     &:not(:last-child){
       margin-bottom: 4rem;
     }
+    
+    @media (max-width: 425px){
+      width: 100%;
+      max-width: 100%;
+      margin:0;
+    }
 `
 
 const Section = ({children}) => {

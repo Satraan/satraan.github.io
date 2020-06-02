@@ -30,8 +30,6 @@ const StyledForm = styled.form`
     font-size: 1.6rem;
     padding:4rem;
     display: inline-block;
-    //background-color: rgba(${Colors.primaryRGB}, .8);
-    
     width: 50%;
   
   input:placeholder-shown + label {
@@ -39,8 +37,6 @@ const StyledForm = styled.form`
     visibility: hidden;
     transform: translateY(-4rem);
   }
-
-  
 
   textarea {
     resize: none;
@@ -78,6 +74,10 @@ const StyledForm = styled.form`
         &::-webkit-input-placeholder {
           color: ${Colors.white};
         }
+    }
+    
+    @media (max-width: 425px){
+      width: 100%;
     }
 `
 

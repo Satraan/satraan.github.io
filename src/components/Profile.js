@@ -56,22 +56,17 @@ const Rotation = styled.div`
 `
 
 const Content = styled.div`
-//margin-left: 400px;
-text-align: left;
-margin: 0 auto;
-p {
-  max-width: 850px;
-  margin-top:1rem;
-  
-
-}
-`
-const ImageContainer = styled.div`
-  width: 40rem;
-  top:50%;
-  border-radius: 50%;
-  shape-outside: circle(50%);
-  float: left;
+    text-align: left;
+    margin: 0 auto;
+    p {
+      max-width: 850px;
+      margin-top:1rem;
+    }
+    
+    @media (max-width: 425px){
+      width: 100%;
+      text-align: center;
+    }
 `
 
 const Image = styled.img`
@@ -80,23 +75,18 @@ const Image = styled.img`
   border-radius: 50%;
   border: solid 3px ${Colors.primary};
   float: left;
-   shape-outside: circle(50%);
-   
-   margin:0  4rem;
+  shape-outside: circle(50%); 
+  margin:0 4rem;
+  
+  @media (max-width: 425px){
+    float: none;
+  }
 
 `
 
 const Profile = ({}) => {
     return (
         <Container>
-            {/*<ImageContainer>*/}
-            {/*<PlanetContainer>*/}
-            {/*    <Rotation>*/}
-            {/*        <Planet/>*/}
-            {/*    </Rotation>*/}
-
-            {/*</PlanetContainer>*/}
-            {/*</ImageContainer>*/}
             <Content>
                 <Image
                     src={Picture}/>

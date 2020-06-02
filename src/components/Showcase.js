@@ -28,6 +28,8 @@ const StyledShowcase = styled.div`
       transform: translateY(-20px);
     }
 
+  
+
 `
 
 

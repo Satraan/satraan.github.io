@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Colors} from "../theme/theme";
 import React from "react";
+import {LoadingSpinner} from "../assets/icons/complexIcons";
 
 const StyledForm = styled.form`
     text-align: center;
@@ -91,7 +92,6 @@ const Input = styled.input`
 `
 
 const Button = styled.button`
-  padding:1.5rem 4.5rem;
   font-size: 1.8rem;
   font-weight: 600;
   border-radius: 3px;
@@ -100,6 +100,8 @@ const Button = styled.button`
   box-shadow: none;
   outline:none;
   cursor: pointer;
+  width: 200px;
+  height: 80px;
   
   
   
@@ -115,6 +117,48 @@ const Button = styled.button`
     }
 
 `
+const Success = styled.button`
+	font-size: 1.8rem;
+	font-weight: 600;
+	border-radius: 3px;
+	background-color: transparent;
+	color: ${Colors.white};
+	box-shadow: none;
+	outline:none;
+	width: 200px;
+	height: 80px;
+	margin: 0 auto;
+	border: 3px solid rgba( ${Colors.primaryRGB}, .8);`
+
+const Loader = styled.div`
+	font-size: 1.8rem;
+	font-weight: 600;
+	border-radius: 3px;
+	background-color: transparent;
+	color: ${Colors.white};
+	box-shadow: none;
+	outline:none;
+	cursor: pointer;
+	width: 200px;
+	height: 80px;
+	margin: 0 auto;
+	
+	
+	border: 3px solid rgba( ${Colors.primaryRGB}, .8);
+	transition: all .5s;
+	transform: translateY(0);
+
+&:hover {
+		background-color: rgba(${Colors.primaryRGB}, .8);
+		cursor: pointer;
+		box-shadow: 1px 8px 15px 2px ${Colors.primaryDarker};
+		transform: translateY(-2px);
+	}
+	
+	> div {
+	transform: translateY(-2px);
+	}
+`
 
 export default class MyForm extends React.Component {
 	constructor(props) {
@@ -125,13 +169,21 @@ export default class MyForm extends React.Component {
 		};
 	}
 	
-	handleSubmit(event) {
+	
+	async handleSubmit(event) {
 		event.preventDefault();
+		
+		this.setState({status: "LOADING"})
+		
 		const data = new FormData(event.target);
 		
-		fetch('https://formspree.io/xknqjqye', {
+		const response = await fetch('https://formspree.io/xknqjqye', {
 			method: 'POST',
+			mode: "no-cors",
 			body: data,
+		}).then(resp => {
+			document.getElementById("contactForm").reset();
+			this.setState({status: "SUCCESS"});
 		});
 	}
 	
@@ -142,6 +194,7 @@ export default class MyForm extends React.Component {
 				onSubmit={
 					this.handleSubmit
 				}
+				id={"contactForm"}
 			>
 				<InputContainer>
 					<label>Email:</label>
@@ -151,28 +204,34 @@ export default class MyForm extends React.Component {
 					<label>Message:</label>
 					<TextArea type="textarea" name="message" rows="8" required/>
 				</InputContainer>
-				{status === "SUCCESS" ? <p>Thanks!</p> : <Button>Submit</Button>}
-				{status === "ERROR" && <p>Ooops! There was an error.</p>}
+				
+				{status === "SUCCESS" ? <Success>Thanks!</Success> :
+					<React.Fragment>
+						{status === "LOADING" ? <Loader><LoadingSpinner/></Loader> : <Button>Submit</Button>}
+					</React.Fragment>
+				}
+			
+			
 			</StyledForm>
 		);
 	}
 	
-	submitForm(ev) {
-		ev.preventDefault();
-		const form = ev.target;
-		const data = new FormData(form);
-		const xhr = new XMLHttpRequest();
-		xhr.open(form.method, form.action);
-		xhr.setRequestHeader("Accept", "application/json");
-		xhr.onreadystatechange = () => {
-			if (xhr.readyState !== XMLHttpRequest.DONE) return;
-			if (xhr.status === 200) {
-				form.reset();
-				this.setState({status: "SUCCESS"});
-			} else {
-				this.setState({status: "ERROR"});
-			}
-		};
-		xhr.send(data);
-	}
+	// submitForm(ev) {
+	// 	ev.preventDefault();
+	// 	const form = ev.target;
+	// 	const data = new FormData(form);
+	// 	const xhr = new XMLHttpRequest();
+	// 	xhr.open(form.method, form.action);
+	// 	xhr.setRequestHeader("Accept", "application/json");
+	// 	xhr.onreadystatechange = () => {
+	// 		if (xhr.readyState !== XMLHttpRequest.DONE) return;
+	// 		if (xhr.status === 200) {
+	// 			form.reset();
+	// 			this.setState({status: "SUCCESS"});
+	// 		} else {
+	// 			this.setState({status: "ERROR"});
+	// 		}
+	// 	};
+	// 	xhr.send(data);
+	// }
 }

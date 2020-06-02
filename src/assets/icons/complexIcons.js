@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {loadingRing} from "../../components/animations/keyframes";
+import {Colors} from "../../theme/theme";
 
 const Moon = styled.span`
 font-size: 4rem;
@@ -39,38 +40,35 @@ const Loader = styled.div`
   position: relative;
   width: 80px;
   height: 80px;
-
+  transform: scale(0.8);
 div {
-  box-sizing: border-box;
-  display: block;
+  display: inline-block;
   position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #fff;
-  border-radius: 50%;
-  animation: ${loadingRing} 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
+  left: 8px;
+  width: 16px;
+  background: ${Colors.primary};
+  animation: ${loadingRing} 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 div:nth-child(1) {
-  animation-delay: -0.45s;
+  left: 8px;
+  animation-delay: -0.24s;
 }
 div:nth-child(2) {
-  animation-delay: -0.3s;
+  left: 32px;
+  animation-delay: -0.12s;
 }
 div:nth-child(3) {
-  animation-delay: -0.15s;
+  left: 56px;
+  animation-delay: 0;
 }
-
 `
 
 const LoadingSpinner = () => {
 	return (
 		<Loader className="lds-ring">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
 		</Loader>)
 }
 

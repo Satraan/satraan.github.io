@@ -11,10 +11,12 @@ const spinRight = keyframes`
 `
 const loadingRing = keyframes`
 	0% {
-		transform: rotate(0deg);
-}
-	100% {
-		transform: rotate(360deg);
-}
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
 `
 export {spinRight, loadingRing}

@@ -11,15 +11,11 @@ import {
 } from "./AppStyles";
 import './App.css';
 import Section from "./components/layout/Section";
-import Heading from "./components/basic/Heading";
-import Showcase from "./components/Showcase";
-import Form from "./components/Form";
-import Profile from "./components/Profile";
-import Skills from "./components/Skills";
+import {Heading} from "./components/basic"
+import {Showcase, Form, Hero, Profile, Skills} from "./components"
 import {IconMoon} from "./assets/icons/complexIcons";
 import RouxtAccessLogo from "./assets/img/RouxtAccess.png";
 import SpinningPlanet from "./components/animations/SpinningPlanet";
-import Hero from "./components/Hero";
 
 const App = () => {
     return (

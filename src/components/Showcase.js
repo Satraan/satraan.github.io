@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 
 import {Colors} from "../theme/theme";
-
 const StyledShowcase = styled.div`
     width: 100%;
     position: relative;

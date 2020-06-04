@@ -19,7 +19,7 @@ const TextBox = styled.div`
 
 `
 const StyledHero = styled.div`
-  height: calc(100vh + 800px);
+  height: calc(100vh + 200px);
   display: flex;
   background-image: linear-gradient(
                   to right bottom,
@@ -56,7 +56,7 @@ const Hero = () => {
                 <Heading letterSpaced>Mandia Roux</Heading>
                 <Subtitle>Frontend Developer</Subtitle>
             </TextBox>
-            <RocketShip/>
+            {/*<RocketShip/>*/}
 
         </StyledHero>
 

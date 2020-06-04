@@ -28,7 +28,7 @@ const Body = styled.div`
 
 const Header = styled.header``
 const Main = styled.main`
-      padding-top:45vh;
+      padding-top:10vh;
       border-top:5px solid ${Colors.primaryDarker};
       background-image: linear-gradient(
                      to bottom,
@@ -37,6 +37,7 @@ const Main = styled.main`
                       url(${asteroidBackground});
     background-size:cover ;
     text-align: center;
+    position: relative;
   
     @media (max-width: 425px){
       background-position: center;
@@ -96,13 +97,30 @@ background-color: #3701b9;
 //   animation: ${spinRight} 15s linear infinite;
 // `
 
+const Disclaimer = styled.div`
+  width: 300px;
+  background-color: ${Colors.primary};
+  margin: 0 auto;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 1.7rem;
+  transform: translate(-50%, -50%);
+`
+
 const App = () => {
     return (
         <Body>
             <Header>
                 <Hero/>
+
             </Header>
+
             <Main>
+                <Disclaimer>
+                    Disclaimer: As of June 2020, this site is still a work in progress!
+                </Disclaimer>
                 {/*<Navigation/>*/}
                 <Section>
                     <RotatingMoon>

@@ -1,0 +1,34 @@
+[debug] [2020-06-04T10:34:44.170Z] ----------------------------------------------------------------------
+[debug] [2020-06-04T10:34:44.171Z] Command:       /usr/local/bin/firebase /Users/mandia/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2020-06-04T10:34:44.171Z] CLI Version:   8.3.0
+[debug] [2020-06-04T10:34:44.171Z] Platform:      darwin
+[debug] [2020-06-04T10:34:44.171Z] Node Version:  v12.16.1
+[debug] [2020-06-04T10:34:44.174Z] Time:          Thu Jun 04 2020 12:34:44 GMT+0200 (South Africa Standard Time)
+[debug] [2020-06-04T10:34:44.175Z] ----------------------------------------------------------------------
+[debug] [2020-06-04T10:34:44.175Z] 
+[debug] [2020-06-04T10:34:44.184Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-04T10:34:44.184Z] > authorizing via signed-in user
+[debug] [2020-06-04T10:34:44.184Z] [iam] checking project mandia-roux for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-06-04T10:34:44.186Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-06-04T10:34:44.186Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-06-04T10:34:44.687Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Jun 2020 10:34:44 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-04T10:34:44.710Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mandia-roux:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-06-04T10:34:46.697Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Jun 2020 10:34:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1505","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-04T10:34:46.698Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mandia-roux  
+ 
+[debug] [2020-06-04T10:34:47.532Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Jun 2020 10:34:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'mandia-roux'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-06-04T10:34:47.534Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/mandia-roux/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-06-04T10:34:50.486Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Jun 2020 10:34:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[mandia-roux]: beginning deploy... 
+[info] i  hosting[mandia-roux]: found 43 files in build 
+[debug] [2020-06-04T10:34:50.754Z] [hosting] hash cache [YnVpbGQ] stored for 43 files
+[debug] [2020-06-04T10:34:50.754Z] [hosting][hash queue][FINAL] {"max":235,"min":19,"avg":39.55813953488372,"active":0,"complete":43,"success":43,"errored":0,"retried":0,"total":43,"elapsed":249}
+[debug] [2020-06-04T10:34:50.754Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/mandia-roux/versions/0308a93dde17a195:populateFiles  
+ <request body omitted>
